@@ -2,12 +2,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gke-test
+  labels:
+    app: spring-petclinic
 spec:
   replicas: 1
-  template:
-    metadata:
-      labels:
-        app: spring-petclinic
+  selector:
+    matchLabels:
+      app: spring-petclinic
     spec:
       containers:
       - name: spring-petclinic
