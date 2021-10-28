@@ -6,6 +6,6 @@ spec:
   selector:
     app: spring-petclinic
   ports:
-    - protocol: http
+    - protocol: TCP
       port: 80
       targetPort: 8080
