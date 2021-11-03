@@ -1,21 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gke-test
+  name: product-zero-spring-petclinic
   labels:
-    app: gke-test
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gke-test
+      app: product-zero-spring-petclinic
   template:
     metadata:
       labels:
-        app: gke-test
+        app: product-zero-spring-petclinic 
     spec:
       containers:
-      - name: spring-petclinic
+      - name: product-zero-spring-petclinic
         image: aisuluu3008/spring-petclinic
         ports:
         - containerPort: 80
